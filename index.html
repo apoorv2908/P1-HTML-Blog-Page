@@ -7,19 +7,14 @@
     <title>Backtracking-Project</title>
 </head>
 <body>
-    <div>
     <h2>Backtracking</h2>
 
-    <p>Backtrakcing is a form of recursion</p>
+    <p>Backtrakcing is a form of recursion.</p>
     <p>The usual scenario is that you are taced with a number of options, and you must choose one of these. After you make your hoice you will get a new set of options; just what set of options you get depends on what choice you made. Ihis procedure isrepeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state, if you didnt, it isn't</p>
-    <p>Conceptually, you start at the root ot a tree, the tree probably has Some good leaves and some bad leaves, though it may be that
-       he leaves are all good or all bad. You want to get to a good leat. At each node, beginning with the root, you choose one of its
-       hildren to move to, and you keep this up until you get to a leat.
-       <p>Suppose you get to a bad leaf. You can backtrack to continue the search for a good leaf by revoking your most recent choice,
-        and trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try
-        another choice at that node. it you end up at the root with no options left, there are no good leaves to be tound.</p>
-    </div>
-    <p>This needs an example</p>
+    <p>Conceptually, you start at the root ot a tree, the tree probably has Some good leaves and some bad leaves, though it may be that the leaves are all good or all bad. You want to get to a good leat. At each node, beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
+    <p>Suppose you get to a bad leaf. You can backtrack to continue the search for a good leaf by revoking your most recent choice, and trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. it you end up at the root with no options left, there are no good leaves to be found.</p>
+
+    <p>This needs an example.</p>
     <img src= "./Image_root.jpg" height="150" width="300">
     
     <ol style="line-height: 200%;">
@@ -35,10 +30,10 @@
     </ol>
 
     <p style = "border: 1px solid black; padding: 20px; background-color: lightgrey; border-radius: 10px;">
-        In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)
+    In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)
     </p>
     <hr>
-    <h3>The Backtracking Algorithm</h3>
+    <h3>The backtracking algorithm</h3>
     <pre style = " border: 1px solid black; border-radius: 10px; color: blue ">
         
         boolean solve(Node n) {
@@ -82,7 +77,7 @@
         }
     </pre>
     <p>The backtracking algorithm is simple but important. You should understand it thoroughly. Another way of stating it is as follows:</p>
-    <h3>To search a tree:</h3>
+    <h3> &bull; To search a tree:</h3>
     <ol>
         <li>If the tree consists of a single leaf, test whether it is a goal node.</li>
         <li>Otherwise, search the subtrees until you find one containing a goal node, or until you have searched them all unsuccessfully.</li>
@@ -276,7 +271,7 @@
     
     <table style="border: 1px solid black; margin-left:auto; margin-right:auto;">
             <tr style="border: 1px solid black;">
-                <td>&nbsp;</td>
+                <td style="border: 1px solid black;">&nbsp;</td>
                 <td style="background-color: grey; border: 1px solid black;">2 by 3 map</td>
                 <td style="background-color: grey; border: 1px solid black;">3 by 3 map</td>
                 <td style="background-color: grey; border: 1px solid black;">4 by 3 map</td>
@@ -423,38 +418,44 @@
             at __SHELL38.run(__SHELL38.java:16) 
             at bluej.runtime.ExecServer.suspendExecution(Unknown Source)
     </pre>
-
+    <br>
+    <hr>
     <h3>Example: Cindy's Puzzle</h3>
 
     <p>I call the following puzzle "Cindy's puzzle" for historical reasons. You have some number n of black marbles and the same number of white marbles, and you have a playing board which consists simply of a line of 2n+1 spaces to put the marbles in. Start with the black marbles all at one end (say, the left), the white marbles all at the other end, and a free space in between.</p>
 
     <center>
-        <table border="1" cellpadding = "5">
-            <td><img src="./black-ball.jpg"></td>
-            <td><img src="./black-ball.jpg"></td>
-            <td width = "45"></td>
-            <td><img src="./white-ball.jpg"></td>
-            <td><img src="./white-ball.jpg"></td>
+        <table style="border: 1px solid black; border-collapse: collapse;"  cellpadding = "5">
+            <tr>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./black-ball.jpg"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./black-ball.jpg"></td>
+                <td width = "50"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./white-ball.jpg"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./white-ball.jpg"></td>
+            </tr>
         </table>
     </center>
     <p>The goal is to reverse the positions of the marbles:</p>
     <center>
-        <table border="1" cellpadding = "5">
-            <td><img src="./white-ball.jpg"></td>
-            <td><img src="./white-ball.jpg"></td>
-            <td width = "45"></td>
-            <td><img src="./black-ball.jpg"></td>
-            <td><img src="./black-ball.jpg"></td>
+        <table style="border: 1px solid black; border-collapse: collapse;" cellpadding = "5">
+            <tr>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./white-ball.jpg"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./white-ball.jpg"></td>
+                <td width = "50"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./black-ball.jpg"></td>
+                <td style="border: 1px solid black; border-collapse: collapse;"><img src="./black-ball.jpg"></td>
+            </tr>
         </table>
     </center>
-    <p>The black marbles can only move to the right, and the white marbles can only move to the left (no backing up). At each move, a marble can either:</p>
-    <ol>
+    <br>
+    <b>The black marbles can only move to the right, and the white marbles can only move to the left (no backing up). At each move, a marble can either:</b>
+    <ul>
         <li>Move one space ahead, if that space is clear, or</li>
         <li>Jump ahead over exactly one marble of the opposite color, if the space just beyond that marble is clear.</li>
-    </ol>
+    </ul>
     <p>For example, you could make the following sequence of moves:</p>
     <center>
-        <table cellpadding = "5">
+        <table cellpadding = "5" style="border-collapse: collapse;" >
             <td style= "width: 60px;"><b>Starting Position:</b></td>
             <td style="border: 1px solid black;"><img src="./black-ball.jpg"></td>
             <td style="border: 1px solid black;"><img src="./black-ball.jpg"></td>
@@ -463,7 +464,7 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table cellpadding = "5">
+        <table cellpadding = "5" style="border-collapse: collapse;" >
             <td style="width: 60px;"><b>Black Moves ahead:</b></td>
             <td style="border: 1px solid black;"><img src="./black-ball.jpg"></td>
             <td style="border: 1px solid black;" width = "50"></td>
@@ -472,7 +473,7 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table cellpadding = "5">
+        <table cellpadding = "5" style="border-collapse: collapse;">
             <td style="width: 60px;"><b>White Jumps:</b></td>
             <td style="border: 1px solid black;"><img src="./black-ball.jpg"></td>
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
@@ -481,7 +482,7 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table cellpadding = "5">
+        <table cellpadding = "5" style="border-collapse: collapse;">
             <td style="width: 60px;"><b>Black Moves ahead:</b></td>
             <td style="border: 1px solid black;"><img src="./black-ball.jpg"></td>
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
@@ -490,7 +491,7 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table cellpadding = "5">
+        <table cellpadding = "5" style="border-collapse: collapse;">
             <td style="width: 60px;"><b>Black Jumps:</b></td>
             <td style="border: 1px solid black;" width = "50"></td>
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
@@ -499,7 +500,7 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table  cellpadding = "5">
+        <table  cellpadding = "5" style="border-collapse: collapse;">
             <td style="width: 60px;"><b>White Moves ahead:</b></td>
             <td style="border: 1px solid black;" width = "50"></td>
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
@@ -508,19 +509,17 @@
             <td style="border: 1px solid black;"><img src="./white-ball.jpg"></td>
         </table>
         <br>
-        <table  cellpadding = "5">
+        <table cellpadding = "5">
             <td style="width: 60px;"><b>Stuck!</b></td>
-            <td style="border: 1px solid white;" width = "50" ></td>
-            <td style="border: 1px solid white;" width = "50"></td>
-            <td style="border: 1px solid white;" width = "50"></td>
-            <td style="border: 1px solid white;" width = "50"></td>
-            <td style="border: 1px solid white;" width = "50"></td>
+            <td width = "50" ></td>
+            <td width = "50"></td>
+            <td width = "50"></td>
+            <td width = "50"></td>
+            <td width = "50"></td>
         </table>
-
     </center>
     <br>
-    <p>The backtracking method is named solvable and returns a boolean. In solvable we shall need to check whether we are at a leaf, which in this case means a position from which no further moves are possible. This isn't so easy. 
-    </p>
+    <p>The backtracking method is named solvable and returns a boolean. In solvable we shall need to check whether we are at a leaf, which in this case means a position from which no further moves are possible. This isn't so easy.</p>
     <p>Now to the program. The main program will initialize the board, and call a recursive backtracking routine to attempt to solve the puzzle. The backtracking routine will either succeed and print out a winning path, or it will fail, and the main program will have to print out the bad news. </p>
     <p>The backtracking method is named solvable and returns a boolean. In solvable we shall need to check whether we are at a leaf, which in this case means a position from which no further moves are possible. This isn't so easy.</p>
     <p>Each possible move will result in a new board position, and these new board positions are the children of the current board position. Hence to find the children of a node (that is, of a board position), we need only find the possible moves from that node. Remember that it is also highly desirable to find an ordering on these possible moves.</p>
@@ -560,23 +559,23 @@
     <p>Along with canMove and makeMove, we are using methods puzzleSolved and printBoard with meanings that should be obvious.</p>
     <p>Here is some output from the program:</p>
 
-    <ol reversed>
-        <li><b>WHITE WHITE WHITE _____ BLACK BLACK BLACK</b></li>
-        <li><b>WHITE WHITE WHITE BLACK _____ BLACK BLACK</b></li>
-        <li><b>WHITE WHITE _____ BLACK WHITE BLACK BLACK</b></li>
-        <li><b>WHITE _____ WHITE BLACK WHITE BLACK BLACK</b></li>
-        <li><b>WHITE BLACK WHITE _____ WHITE BLACK BLACK</b></li>
-        <li><b>WHITE BLACK WHITE BLACK WHITE _____  BLACK</b></li>
-        <li><b>WHITE BLACK WHITE BLACK WHITE BLACK _____</b></li>
-        <li><b>WHITE BLACK WHITE BLACK _____ BLACK WHITE</b></li>
-        <li><b>WHITE BLACK _____ BLACK WHITE BLACK WHITE</b></li>
-        <li><b>_____ BLACK WHITE BLACK WHITE BLACK WHITE</b></li>
-        <li><b>BLACK _____ WHITE BLACK WHITE BLACK WHITE</b></li>
-        <li><b>BLACK BLACK WHITE _____ WHITE BLACK WHITE</b></li>
-        <li><b>BLACK BLACK WHITE BLACK WHITE _____ WHITE</b></li>
-        <li><b>BLACK BLACK WHITE BLACK _____ WHITE WHITE</b></li>
-        <li><b>BLACK BLACK _____ BLACK WHITE WHITE WHITE</b></li>
-        <li><b>BLACK BLACK BLACK _____ WHITE WHITE WHITE</b></li>
+    <ol reversed style="font-weight: bold;">
+        <li style="color: blue;"><span style="color: black;">WHITE WHITE WHITE _____ BLACK BLACK BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE WHITE WHITE BLACK _____ BLACK BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE WHITE _____ BLACK WHITE BLACK BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE _____ WHITE BLACK WHITE BLACK BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE BLACK WHITE _____ WHITE BLACK BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE BLACK WHITE BLACK WHITE _____  BLACK</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE BLACK WHITE BLACK WHITE BLACK _____</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE BLACK WHITE BLACK _____ BLACK WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">WHITE BLACK _____ BLACK WHITE BLACK WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">_____ BLACK WHITE BLACK WHITE BLACK WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK _____ WHITE BLACK WHITE BLACK WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK BLACK WHITE _____ WHITE BLACK WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK BLACK WHITE BLACK WHITE _____ WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK BLACK WHITE BLACK _____ WHITE WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK BLACK _____ BLACK WHITE WHITE WHITE</span></li>
+        <li style="color: blue;"><span style="color: black;">BLACK BLACK BLACK _____ WHITE WHITE WHITE</span></li>
     </ol>
 
     <p style = "border: 1px solid black; border-radius: 10px; padding: 20px; background-color: lightgrey;">Notice that the solution is given in reverse order: BLACK starts out on the left and WHITE on the right, as in the last line. I've added line numbers to the actual output in order to emphasize this point. Backtracking always produces its results (sequence of choices) in reverse order; it is up to you, the programmer, to reverse the results again to get them in the correct order.</p>
